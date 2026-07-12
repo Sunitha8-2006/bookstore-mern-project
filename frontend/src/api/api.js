@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://bookstore-backend-n33a.onrender.com",
+  baseURL: "https://bookstore-backend-n33a.onrender.com/api",
 });
 
 api.interceptors.request.use((config) => {
