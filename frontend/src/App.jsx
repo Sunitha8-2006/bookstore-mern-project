@@ -14,26 +14,46 @@ import { useAuth } from "./context/AuthContext";
 
 const PrivateRoute = ({ children }) => {
   const { user } = useAuth();
-  return user ? children : <Navigate to="/login" />;
+
+  return user ? children : <Navigate to="/login" replace />;
 };
 
 const AdminRoute = ({ children }) => {
   const { user } = useAuth();
-  return user?.role === "admin" ? children : <Navigate to="/" />;
+
+  return user?.role === "admin" ? (
+    children
+  ) : (
+    <Navigate to="/" replace />
+  );
 };
 
 function App() {
   return (
     <div className="app-shell">
       <Navbar />
+
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
+
           <Route path="/books" element={<Books />} />
+
           <Route path="/books/:id" element={<BookDetail />} />
+
           <Route path="/login" element={<Login />} />
+
           <Route path="/register" element={<Register />} />
-          <Route path="/cart" element={<Cart />} />
+
+          <Route
+            path="/cart"
+            element={
+              <PrivateRoute>
+                <Cart />
+              </PrivateRoute>
+            }
+          />
+
           <Route
             path="/my-orders"
             element={
@@ -42,6 +62,7 @@ function App() {
               </PrivateRoute>
             }
           />
+
           <Route
             path="/admin"
             element={
@@ -50,8 +71,11 @@ function App() {
               </AdminRoute>
             }
           />
+
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
+
       <Footer />
     </div>
   );
