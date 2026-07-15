@@ -41,6 +41,32 @@ bookstore/
 
 ---
 
+
+## 📸 Screenshots
+
+### Home Page
+![Home](screenshots/home.png)
+
+### Admin Page
+![Admin](screenshots/admin.png)
+
+### Collections Page
+![Collwctions](screenshots/collections.png)
+
+###  Cart
+![Cart](screenshots/cart.png)
+
+### My Orders Dashboard
+![My Orders Dashboard](screenshots/my orders-dashboard.png)
+
+
+
+
+
+
+
+
+
 ## 🚀 Step-by-Step Setup
 
 ### 1. Install prerequisites
