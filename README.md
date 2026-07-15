@@ -53,13 +53,17 @@ bookstore/
 ### Collections Page
 ![Collwctions](screenshots/collections.png)
 
-###  Cart
+###  Cart Page
 ![Cart](screenshots/cart.png)
 
-### My Orders Dashboard
-![My Orders Dashboard](screenshots/my orders-dashboard.png)
+### My Orders Page
+![My Orders ](screenshots/myorders.png)
+ 
+### Render Page
+![My render](screenshots/render.png)
 
-
+### vercel Page
+![My vercel](screenshots/render.png)
 
 
 
