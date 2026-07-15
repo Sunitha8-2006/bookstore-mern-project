@@ -639,6 +639,70 @@ input, select, textarea { font-family: inherit; }
 
 .order-total { color: var(--maroon); font-size: 1.1rem; }
 
+/* ---------- Order Progress Stepper ---------- */
+.order-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px 0;
+  position: relative;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  text-align: center;
+}
+
+.progress-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--cream-dark);
+  z-index: 0;
+}
+
+.progress-step.active:not(:last-child)::after {
+  background: var(--maroon);
+}
+
+.progress-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--cream-dark);
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.progress-step.active .progress-circle {
+  background: var(--maroon);
+  color: white;
+}
+
+.progress-step span {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.progress-step.active span {
+  color: var(--ink);
+  font-weight: 600;
+}
+
 /* ---------- Admin ---------- */
 .admin-form {
   background: white;
